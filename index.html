@@ -12,9 +12,9 @@
       <img src="img/logo-device.svg" height="35" width="163" alt="Основной логотип">
 
       <form action="https://echo.htmlacademy.ru" method="get">
-        <button type="submit">найти</button>
-
         <input type="search" placeholder="Поиск по сайту" aria-label="Поле поиска на сайте">
+
+        <button type="submit">найти</button>
       </form>
 
       <div class="login-menu visually-hidden">
@@ -83,11 +83,11 @@
 
       <section>
         <div class="slider-menu">
-          <a href="#" aria-label="Кнопка-1"></a>
+          <button class="slider-btn-1" aria-label="Кнопка-1"></button>
 
-          <a href="#" aria-label="Кнопка-2"></a>
+          <button class="slider-btn-2" aria-label="Кнопка-2"></button>
 
-          <a href="#" aria-label="Кнопка-3"></a>
+          <button class="slider-btn-3" aria-label="Кнопка-3"></button>
         </div>
 
         <div>
@@ -161,27 +161,51 @@
       <section>
         <ul>
           <li>
+            <div class="items-vr">
+              <span class="visually-hidden">Виртуальная реальность</span>
+            </div>
+
             <a href="catalog_vr.html">Виртуальная реальность</a>
           </li>
 
           <li>
+            <div class="items-selfie">
+              <span class="visually-hidden">Моноподы для селфи</span>
+            </div>
+
             <a href="catalog_selfie.html">Моноподы для селфи</a>
           </li>
 
           <li>
+            <div class="items-camera">
+              <span class="visually-hidden">Экшн-камеры</span>
+            </div>
+
             <a href="catalog_camera.html">Экшн-камеры</a>
           </li>
 
           <li>
+            <div class="items-fitnes">
+              <span class="visually-hidden">Фитнес-браслеты</span>
+            </div>
+
             <a href="catalog_fitnes.html">Фитнес-браслеты</a>
           </li>
 
           <li>
+            <div class="items-watch">
+              <span class="visually-hidden">Умные часы</span>
+            </div>
+
             <a href="catalog_watch.html">Умные часы</a>
           </li>
 
           <li>
-            <a href="catalog_quadro.html">Квадрокоптер</a>
+            <div class="items-quadro">
+              <span class="visually-hidden">Квадрокоптеры</span>
+            </div>
+
+            <a href="catalog_quadro.html">Квадрокоптеры</a>
           </li>
         </ul>
       </section>
@@ -189,15 +213,15 @@
       <section>
         <ul>
           <li>
-            <a href="#">доставка</a>
+            <button>доставка</button>
           </li>
 
           <li>
-            <a href="#">гарантия</a>
+            <button>гарантия</button>
           </li>
 
           <li>
-            <a href="#">кредит</a>
+            <button>кредит</button>
           </li>
         </ul>
 
@@ -361,7 +385,7 @@
       </form>
     </section>
 
-    <!--Модальное окно с картой. Пока сделал так для разметки, потом поробую добавить интерактива-->
+    <!--Модальное окно с картой-->
     <section id="mapPopup" class="map-popup">
       <h2 class="visually-hidden">Карта</h2>
 
