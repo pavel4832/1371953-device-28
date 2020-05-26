@@ -242,16 +242,24 @@ img {
   color: var(--basic-black);
 }
 
-.btn-decor {
+.more-inform-btn, .message-btn {
+  display: inline-block;
   width: 260px;
   height: 40px;
   background: linear-gradient(transparent 40%, var(--special-yellow-dark) 40%, var(--special-yellow-dark) 60%, transparent 60%);
-}
-
-.more-inform-btn, .message-btn {
   letter-spacing: 0.2em;
+  line-height: 40px;
   text-transform: uppercase;
   color: var(--basic-black);
+  text-align: center;
+}
+
+.more-inform-btn:hover, .more-inform-btn:focus, .message-btn:hover, .message-btn:focus {
+  background: var(--special-yellow-dark);
+}
+
+.more-inform-btn:active > span, .message-btn:active > span {
+  opacity: 0.3;
 }
 
 /*Main catalog*/
@@ -375,8 +383,13 @@ img {
   border: none;
 }
 
-.filter-btn:focus {
+.filter-btn:focus, .filter-btn:hover {
   outline: none;
+  background: var(--special-yellow-dark);
+}
+
+.filter-btn:active > span {
+  opacity: 0.3;
 }
 
 /*Main catalog*/
