@@ -1,14 +1,14 @@
 /*Font section*/
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy.otf") format("opentype");
+  src: url("../fonts/gilroy.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GilroyLight";
-  src: url("../fonts/GilroyLight.otf") format("opentype");
+  src: url("../fonts/gilroylight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -88,30 +88,31 @@ img {
   background-color: var(--special-yellow);
 }
 
-  .search-form > .search-field:focus  {
-    border-bottom: 2px solid var(--basic-black);
-  }
+.search-form > .search-field:focus  {
+  border-bottom: 2px solid var(--basic-black);
+}
 
 .search-field {
   background-color: var(--special-yellow);
   border: none;
 }
 
-  .search-field:focus {
-    outline: none;
-  }
+.search-field:focus {
+  outline: none;
+}
 
-  .search-field::placeholder {
-    opacity: 0.3;
-  }
+.search-field::placeholder {
+  opacity: 0.3;
+}
 
-    .search-field:hover::placeholder {
-      opacity: 0.6;
-    }
+.search-field:hover::placeholder {
+  opacity: 0.6;
+}
 
-    .search-field:focus::placeholder {
-      color: var(--basic-black);
-    }
+.search-field:focus::placeholder {
+  color: var(--basic-black);
+}
+
 .search-btn {
   width: 84px;
   height: 50px;
@@ -124,18 +125,19 @@ img {
 .search-btn span {
   text-transform: uppercase;
 }
-  .search-btn:hover {
-    background-color: var(--basic-black);
-  }
 
-  .search-btn:hover span {
-    color: var(--basic-white);
-  }
+.search-btn:hover {
+  background-color: var(--basic-black);
+}
 
-  .search-btn:active span {
-    color: var(--basic-white);
-    opacity: 0.3;
-  }
+.search-btn:hover span {
+  color: var(--basic-white);
+}
+
+.search-btn:active span {
+  color: var(--basic-white);
+  opacity: 0.3;
+}
 
 .login-menu a {
   color: var(--basic-black);
@@ -145,22 +147,22 @@ img {
   opacity: 0.3;
 }
 
-  .login-menu .logout-btn:hover, .login-menu .logout-btn:focus {
-    opacity: 0.6;
-  }
+.login-menu .logout-btn:hover, .login-menu .logout-btn:focus {
+  opacity: 0.6;
+}
 
 .login-btn, .compare-btn, .basket-btn {
   color: var(--basic-black);
 }
 
-  .login-btn:hover, .compare-btn:hover, .basket-btn:hover,
-  .login-btn:focus, .compare-btn:focus, .basket-btn:focus {
-    opacity: 0.6;
-  }
+.login-btn:hover, .compare-btn:hover, .basket-btn:hover,
+.login-btn:focus, .compare-btn:focus, .basket-btn:focus {
+  opacity: 0.6;
+}
 
-  .login-btn:active, .compare-btn:active, .basket-btn:active {
-    opacity: 0.3;
-  }
+.login-btn:active, .compare-btn:active, .basket-btn:active {
+  opacity: 0.3;
+}
 
 .main-navigation {
   background-color: transparent;
@@ -174,6 +176,10 @@ img {
   color: var(--basic-black)
 }
 
+.main-navigation-item a {
+  text-transform: uppercase;
+}
+
 .hidden-menu-list {
   list-style: none;
 }
@@ -183,16 +189,17 @@ img {
   font-size: 15px;
   line-height: 20px;
   color: var(--basic-black);
+  text-transform: none;
 }
 
-  .main-navigation-list a:hover, .main-navigation-list a:focus,
-  .hidden-menu-list a:hover, .hidden-menu-list a:focus {
-    opacity: 0.6;
-  }
+.main-navigation-list a:hover, .main-navigation-list a:focus,
+.hidden-menu-list a:hover, .hidden-menu-list a:focus {
+  opacity: 0.6;
+}
 
-  .main-navigation-list a:active, .hidden-menu-list a:active {
-    opacity: 0.3;
-  }
+.main-navigation-list a:active, .hidden-menu-list a:active {
+  opacity: 0.3;
+}
 
 /*Promo slider*/
 
@@ -237,8 +244,8 @@ img {
 
 .btn-decor {
   width: 260px;
-  height: 8px;
-  background-color: var(--special-yellow-dark);
+  height: 40px;
+  background: linear-gradient(transparent 40%, var(--special-yellow-dark) 40%, var(--special-yellow-dark) 60%, transparent 60%);
 }
 
 .more-inform-btn, .message-btn {
@@ -273,13 +280,13 @@ img {
   color: var(--basic-black);
 }
 
-  .breadcrumbs-list a:hover, .breadcrumbs-list a:focus {
-    opacity: 0.6;
-  }
+.breadcrumbs-list a:hover, .breadcrumbs-list a:focus {
+  opacity: 0.6;
+}
 
-  .breadcrumbs-list a:active {
-    opacity: 0.1;
-  }
+.breadcrumbs-list a:active {
+  opacity: 0.1;
+}
 
 /*Filter*/
 .filter h2 {
@@ -319,38 +326,41 @@ img {
   display: none;
 }
 
-  .filter-color-list label:before {
-    content: url("../img/checkbox-off.svg");
-  }
+.filter-color-list label:before {
+  content: url("../img/checkbox-off.svg");
+}
 
-  .filter-bletooth-list label:before {
-    content: url("../img/radio-off.svg");
-  }
+.filter-bletooth-list label:before {
+  content: url("../img/radio-off.svg");
+}
 
 /* checked checkbox*/
-  .filter-input-checkbox:checked + label:before {
-    content: url("../img/checkbox-on.svg");
-  }
+.filter-input-checkbox:checked + label:before {
+  content: url("../img/checkbox-on.svg");
+}
+
 /* disabled checkbox*/
-  .filter-input-checkbox:disabled + label:before {
-    opacity: 0.25;
-  }
+.filter-input-checkbox:disabled + label:before {
+  opacity: 0.25;
+}
 
 /* checked radio*/
-  .filter-radio:checked + label:before {
-    content: url("../img/radio-on.svg");
-  }
-/* disabled radio*/
-  .filter-radio:disabled + label:before {
-    opacity: 0.25;
-  }
-  .filter-input-checkbox:hover + label, .filter-radio:hover + label {
-    opacity: 0.6;
-  }
+.filter-radio:checked + label:before {
+  content: url("../img/radio-on.svg");
+}
 
-  .filter-input-checkbox:active + label, .filter-radio:active + label {
-    opacity: 1.0;
-  }
+/* disabled radio*/
+.filter-radio:disabled + label:before {
+  opacity: 0.25;
+}
+
+.filter-input-checkbox:hover + label, .filter-radio:hover + label {
+  opacity: 0.6;
+}
+
+.filter-input-checkbox:active + label, .filter-radio:active + label {
+  opacity: 1.0;
+}
 
 /*Filter submit button*/
 .filter-btn {
@@ -360,14 +370,14 @@ img {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   width: 200px;
-  height: 8px;
-  background-color: var(--special-yellow-dark);
+  height: 40px;
+  background: linear-gradient(transparent 40%, var(--special-yellow-dark) 40%, var(--special-yellow-dark) 60%, transparent 60%);
   border: none;
 }
 
-  .filter-btn:focus {
-    outline: none;
-  }
+.filter-btn:focus {
+  outline: none;
+}
 
 /*Main catalog*/
 .main-catalog {
@@ -409,19 +419,19 @@ img {
   background-color: transparent;
 }
 
-  .add-compare-btn:hover {
-    outline: none;
-    opacity: 1.0;
-  }
+.add-compare-btn:hover {
+  outline: none;
+  opacity: 1.0;
+}
 
-  .add-compare-btn:focus {
-    outline: none;
-  }
+.add-compare-btn:focus {
+  outline: none;
+}
 
-  .add-compare-btn:active {
-    outline: none;
-    opacity: 0.2;
-  }
+.add-compare-btn:active {
+  outline: none;
+  opacity: 0.2;
+}
 
 /*Main footer*/
 .footer {
@@ -433,13 +443,13 @@ img {
   fill: var(--special-yellow-dark);
 }
 
-  .footer-logo-link:hover > .footer-logo-svg path {
-    fill-opacity: 0.6;
-  }
+.footer-logo-link:hover > .footer-logo-svg path {
+  fill-opacity: 0.6;
+}
 
-  .footer-logo-link:active > .footer-logo-svg path {
-    fill-opacity: 0.3;
-  }
+.footer-logo-link:active > .footer-logo-svg path {
+  fill-opacity: 0.3;
+}
 
 .footer a {
   color: var(--basic-white);
@@ -453,13 +463,13 @@ img {
   color: var(--basic-white);
 }
 
-  .footer-menu a:hover, .footer-menu a:focus {
-    opacity: 1.0;
-  }
+.footer-menu a:hover, .footer-menu a:focus {
+  opacity: 1.0;
+}
 
-  .footer-menu a:active {
-    opacity: 0.3;
-  }
+.footer-menu a:active {
+  opacity: 0.3;
+}
 
 .footer-contact-menu p{
   font-family: "OpenSans", Arial, sans-serif;
@@ -498,22 +508,22 @@ img {
 }
 
 /* Social button */
-  .social-button:hover > .social-button-svg path,
-  .social-button:focus > .social-button-svg path {
-    fill-opacity: 0.6;
-  }
+.social-button:hover > .social-button-svg path,
+.social-button:focus > .social-button-svg path {
+  fill-opacity: 0.6;
+}
 
-  .social-button:active > .social-button-svg path {
-    fill-opacity: 0.1;
-  }
+.social-button:active > .social-button-svg path {
+  fill-opacity: 0.1;
+}
 
 /* Logo academy*/
-  .htmlacademy-link:hover > .htmlacademy-svg path,
-  .htmlacademy-link:focus > .htmlacademy-svg path {
-    fill-opacity: 0.6;
-  }
+.htmlacademy-link:hover > .htmlacademy-svg path,
+.htmlacademy-link:focus > .htmlacademy-svg path {
+  fill-opacity: 0.6;
+}
 
-  .htmlacademy-link:active > .htmlacademy-svg path {
-    fill-opacity: 0.3;
-  }
+.htmlacademy-link:active > .htmlacademy-svg path {
+  fill-opacity: 0.3;
+}
 
