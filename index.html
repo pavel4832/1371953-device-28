@@ -81,30 +81,34 @@
           </li>
         </ul>
       </nav>
+
+      <div class="white-bar"></div>
     </header>
 
     <main>
       <h1 class="visually-hidden">HTML Academy: Девайс</h1>
 
-      <section>
+      <section class="slider contaner">
         <div class="slider-menu">
-          <button type="button" class="slider-btn-1" aria-label="Кнопка-1"></button>
+          <button type="button" class="slider-btn" aria-label="Кнопка-1"></button>
 
-          <button type="button" class="slider-btn-2" aria-label="Кнопка-2"></button>
+          <button type="button" class="slider-btn slider-btn-checked" aria-label="Кнопка-2"></button>
 
-          <button type="button" class="slider-btn-3" aria-label="Кнопка-3"></button>
+          <button type="button" class="slider-btn" aria-label="Кнопка-3"></button>
         </div>
 
-        <div>
+        <div class="slider-item">
           <h2>Делай селфи, как Бен Стиллер!</h2>
 
           <img src="img/slider-selfy.png" height="486" width="384" alt="Фото самой длинной селфи палки">
 
+          <span class="slider-number">01</span>
+
           <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 
-          <a href="#">подробнее</a>
+          <a class="btn-info" href="#"><span>подробнее</span></a>
 
-          <table>
+          <table class="slider-features">
             <tr>
               <th>8,5 м</th>
               <th>5 кг</th>
@@ -119,16 +123,18 @@
           </table>
         </div>
 
-        <div>
+        <div class="slider-item">
           <h2>Худеем правильно!</h2>
 
           <img src="img/slider-fitness.png" height="483" width="345" alt="Фото фитнес-браслета">
 
+          <span class="slider-number">02</span>
+
           <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
 
-          <a href="#">подробнее</a>
+          <a class="btn-info" href="#"><span>подробнее</span></a>
 
-          <table>
+          <table class="slider-features">
             <tr>
               <th>48 часов</th>
             </tr>
@@ -139,17 +145,19 @@
           </table>
         </div>
 
-        <div>
+        <div class="slider-item">
           <h2>Порхает как бабочка, жалит как пчела!</h2>
 
           <img src="img/slider-quadro.png" height="334" width="526" alt="Фото квадрокоптера">
 
+          <span class="slider-number">03</span>
+
           <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
           </p>
 
-          <a href="#">подробнее</a>
+          <a class="btn-info" href="#"><span>подробнее</span></a>
 
-          <table>
+          <table class="slider-features">
             <tr>
               <th>800 м</th>
               <th>50 м</th>
@@ -163,10 +171,10 @@
         </div>
       </section>
 
-      <section>
+      <section class="catalog-items contaner">
         <ul>
           <li>
-            <div class="items-vr">
+            <div class="catalog-item item-vr">
               <span class="visually-hidden">Виртуальная реальность</span>
             </div>
 
@@ -174,7 +182,7 @@
           </li>
 
           <li>
-            <div class="items-selfie">
+            <div class="catalog-item item-selfie">
               <span class="visually-hidden">Моноподы для селфи</span>
             </div>
 
@@ -182,7 +190,7 @@
           </li>
 
           <li>
-            <div class="items-camera">
+            <div class="catalog-item item-camera">
               <span class="visually-hidden">Экшн-камеры</span>
             </div>
 
@@ -190,7 +198,7 @@
           </li>
 
           <li>
-            <div class="items-fitnes">
+            <div class="catalog-item item-fitnes">
               <span class="visually-hidden">Фитнес-браслеты</span>
             </div>
 
@@ -198,7 +206,7 @@
           </li>
 
           <li>
-            <div class="items-watch">
+            <div class="catalog-item item-watch">
               <span class="visually-hidden">Умные часы</span>
             </div>
 
@@ -206,7 +214,7 @@
           </li>
 
           <li>
-            <div class="items-quadro">
+            <div class="catalog-item item-quadro">
               <span class="visually-hidden">Квадрокоптеры</span>
             </div>
 
@@ -215,63 +223,65 @@
         </ul>
       </section>
 
-      <section>
-        <ul>
-          <li>
-            <button type="button">доставка</button>
-          </li>
+      <section class="services">
+        <div class="services-slider contaner">
+          <ul class="service-slider-list">
+            <li>
+              <button class="service-slider-btn" type="button">доставка</button>
+            </li>
 
-          <li>
-            <button type="button">гарантия</button>
-          </li>
+            <li>
+              <button class="service-slider-btn" type="button">гарантия</button>
+            </li>
 
-          <li>
-            <button type="button">кредит</button>
-          </li>
-        </ul>
+            <li>
+              <button class="service-slider-btn" type="button">кредит</button>
+            </li>
+          </ul>
 
-        <div>
-          <h3>Доставка</h3>
+          <div class="service-slider-item delivery">
+            <h3>Доставка</h3>
 
-          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-        </div>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </div>
 
-        <div>
-          <h3>Гарантия</h3>
+          <div class="service-slider-item warranty">
+            <h3>Гарантия</h3>
 
-          <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-        </div>
+            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+          </div>
 
-        <div>
-          <h3>Кредит</h3>
+          <div class="service-slider-item credit">
+            <h3>Кредит</h3>
 
-           <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+          </div>
         </div>
       </section>
 
-      <section>
-        <ul>
+      <section class="logo-links contaner">
+        <ul class="logo-list">
           <li>
             <a href="#">
-              <img src="img/logo-dji.png" height="100" width="260" alt="Логотип DJI">
+              <img class="dji-logo-img" src="img/logo-dji.png" height="100" width="260" alt="Логотип DJI">
             </a>
           </li>
 
           <li>
             <a href="#">
-              <img src="img/logo-sp_gadgets.png" height="100" width="260" alt="Логотип SP-GADGETS">
+              <img class="sp_gadgets-logo-img" src="img/logo-sp_gadgets.png" height="100" width="260" alt="Логотип SP-GADGETS">
             </a>
           </li>
 
           <li>
             <a href="#">
-              <img src="img/logo-gopro.png" height="100" width="260" alt="Логотип GoPro">
+              <img class="gopro-logo-img" src="img/logo-gopro.png" height="100" width="260" alt="Логотип GoPro">
             </a>
           </li>
 
           <li>
             <a href="#">
-              <img src="img/logo-vive.png" height="100" width="260" alt="Логотип Vive">
+              <img class="vive-logo-img" src="img/logo-vive.png" height="100" width="260" alt="Логотип Vive">
             </a>
           </li>
         </ul>
@@ -407,25 +417,30 @@
     </footer>
 
     <!--Модальное окно с формой отправки сообщения-->
-    <section id="messPopup" class="message-popup visually-hidden">
+    <section id="messPopup" class="message-popup">
       <h2 class="visually-hidden">Форма отправки сообщения</h2>
 
-      <button type="button" aria-label="Закрыть"></button>
+      <button class="close-btn" type="button" aria-label="Закрыть">
+        <svg width="55" height="55" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle opacity=".5" cx="27.5" cy="27.5" r="27.5" fill="#F7E296"/>
+          <path d="M35.95 37.725L28 29.762l-7.95 7.963-1.775-1.775L26.237 28l-7.962-7.95 1.775-1.775L28 26.238l7.95-7.95 1.762 1.762-7.95 7.95 7.95 7.95-1.762 1.775z" fill="#fff" opacity=".7"/>
+        </svg>
+      </button>
 
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
         <label>Ваше имя:
-          <input type="text" name="name-id" placeholder="Имя Фамилия" required>
+          <input class="text-field" type="text" name="name-id" placeholder="Имя Фамилия" required>
         </label>
 
         <label>Ваш e-mail:
-          <input type="text" name="mail-id" placeholder="email@example.com" required>
+          <input class="text-field" type="text" name="mail-id" placeholder="email@example.com" required>
         </label>
 
         <label>Текст письма:
-          <textarea name="message-text" placeholder="В свободной форме" required></textarea>
+          <textarea class="area-field" name="message-text" placeholder="В свободной форме" required></textarea>
         </label>
 
-        <button type="submit">отправить</button>
+        <button class="submit-btn" type="submit"><span>отправить</span></button>
       </form>
     </section>
 
@@ -433,8 +448,13 @@
     <section id="mapPopup" class="map-popup">
       <h2 class="visually-hidden">Карта</h2>
 
-      <button type="button" aria-label="Закрыть"></button>
-
+      <button class="close-btn" type="button" aria-label="Закрыть">
+        <svg width="55" height="55" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle opacity=".5" cx="27.5" cy="27.5" r="27.5" fill="#F7E296"/>
+          <path d="M35.95 37.725L28 29.762l-7.95 7.963-1.775-1.775L26.237 28l-7.962-7.95 1.775-1.775L28 26.238l7.95-7.95 1.762 1.762-7.95 7.95 7.95 7.95-1.762 1.775z" fill="#fff" opacity=".7"/>
+        </svg>
+      </button>
+      
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779994!2d37.527429316215056!3d55.68703098053578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1590143019195!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </section>
   </body>
