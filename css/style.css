@@ -214,11 +214,6 @@ img {
   opacity: 0.3;
 }
 
-.white-bar {
-  width: 100px;
-  height: 7px;
-  background-color: var(--basic-white);
-}
 /*Promo slider*/
 .slider {
   margin: 0 auto;
@@ -233,13 +228,8 @@ img {
   width: 12px;
   height: 12px;
   background-color: transparent;
-  border: none;
-  background-image: url("../img/slider-button-empty.svg");
-  background-position: center;
-}
-
-.slider-btn-checked {
-  background-image: url("../img/slider-button.svg");
+  border: 1px solid var(--basic-black);
+  border-radius: 6px;
 }
 
 .slider-btn:active, .slider-btn:focus {
@@ -250,6 +240,14 @@ img {
   font-size: 47px;
   line-height: 58px;
   color: var(--basic-black);
+}
+
+.slider-item h2::before {
+  display: block;
+  content: "";
+  width: 100px;
+  height: 7px;
+  background-color: var(--basic-white);
 }
 
 .slider-number {
@@ -366,6 +364,7 @@ img {
 }
 
 .service-slider-btn {
+  position: relative;
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 22px;
@@ -386,11 +385,11 @@ img {
 }
 
 .service-slider-btn:active {
+  padding-right: 120px;
   width: 280px;
   background: var(--basic-black);
   outline: none;
   border: none;
-  text-align: left;
   color: var(--special-yellow);
 }
 
@@ -438,12 +437,6 @@ img {
   background-color: var(--basic-white);
 }
 
-.black-bar {
-  width: 80px;
-  height: 7px;
-  background-color: var(--basic-black);
-}
-
 .contacts {
   display: flex;
   flex-direction: column;
@@ -455,10 +448,12 @@ img {
   letter-spacing: 0.2em;
 }
 
-.about-us p, .contacts p {
-  font-family: "OpenSans", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 28px;
+.about-us h2::before, .contacts h2::before {
+  display: block;
+  content: "";
+  width: 80px;
+  height: 7px;
+  background-color: var(--basic-black);
 }
 
 .delivery-list {
@@ -897,6 +892,14 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   color: var(--basic-white);
 }
 
+.footer-contact-menu p::after {
+  display: block;
+  content: "";
+  width: 80px;
+  height: 7px;
+  background-color: #FFC600;
+}
+
 .footer-menu-list {
   list-style: none;
 }
@@ -926,12 +929,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   font-size: 15px;
   line-height: 20px;
   color: var(--basic-white);
-}
-
-.socials .yellow-bar {
-  width: 80px;
-  height: 7px;
-  background-color: #FFC600;
 }
 
 .socials-link-list {
