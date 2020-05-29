@@ -265,9 +265,9 @@ img {
 }
 
 .btn-info {
-  display: inline-block;
+  display: block;
   width: 220px;
-  height: 40px;
+  min-height: 40px;
   background: linear-gradient(transparent 40%, var(--special-yellow-dark) 40%, var(--special-yellow-dark) 60%, transparent 60%);
   letter-spacing: 0.2em;
   line-height: 40px;
@@ -284,8 +284,8 @@ img {
   outline: none;
 }
 
-.btn-info:active > span {
-  opacity: 0.3;
+.btn-info:active {
+  color: rgba(0,0,0,.3);
 }
 
 .slider-features {
@@ -371,9 +371,20 @@ img {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   width: 160px;
-  height: 40px;
+  min-height: 40px;
   background: linear-gradient(transparent 40%, var(--special-yellow-dark) 40%, var(--special-yellow-dark) 60%, transparent 60%);
   border: none;
+}
+
+.service-slider-btn::after {
+  position: absolute;
+  content: "";
+  background: #000;
+  height: 100%;
+  width: 120px;
+  top: 0;
+  right: -120px;
+  display: none;
 }
 
 .service-slider-btn:hover {
@@ -385,12 +396,12 @@ img {
 }
 
 .service-slider-btn:active {
-  padding-right: 120px;
-  width: 280px;
   background: var(--basic-black);
-  outline: none;
-  border: none;
   color: var(--special-yellow);
+}
+
+.service-slider-btn:active::after {
+  display: block;
 }
 
 .service-slider-item {
@@ -467,9 +478,9 @@ img {
 }
 
 .more-inform-btn, .message-btn {
-  display: inline-block;
+  display: block;
   width: 260px;
-  height: 40px;
+  min-height: 40px;
   background: linear-gradient(transparent 40%, var(--special-yellow-dark) 40%, var(--special-yellow-dark) 60%, transparent 60%);
   letter-spacing: 0.2em;
   line-height: 40px;
@@ -486,8 +497,8 @@ img {
   outline: none;
 }
 
-.more-inform-btn:active > span, .message-btn:active > span {
-  opacity: 0.3;
+.more-inform-btn:active, .message-btn:active {
+  color: rgba(0,0,0,.3);
 }
 
 /*Main catalog*/
@@ -637,11 +648,11 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .filter-btn {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 40px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   width: 200px;
-  height: 40px;
+  min-height: 40px;
   background: linear-gradient(transparent 40%, var(--special-yellow-dark) 40%, var(--special-yellow-dark) 60%, transparent 60%);
   border: none;
 }
@@ -655,8 +666,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   outline: none;
 }
 
-.filter-btn:active > span {
-  opacity: 0.3;
+.filter-btn:active {
+  color: rgba(0,0,0,.3);
 }
 
 /*Menu sort*/
@@ -762,11 +773,11 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .add-basket-btn {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 40px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   width: 200px;
-  height: 40px;
+  min-height: 40px;
   background: linear-gradient(transparent 40%, var(--special-yellow-dark) 40%, var(--special-yellow-dark) 60%, transparent 60%);
   border: none;
 }
@@ -780,8 +791,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   outline: none;
 }
 
-.add-basket-btn:active > span {
-  opacity: 0.3;
+.add-basket-btn:active {
+  color: rgba(0,0,0,.3);
 }
 
 .add-compare-btn {
@@ -1026,11 +1037,11 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .submit-btn {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 40px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   width: 200px;
-  height: 40px;
+  min-height: 40px;
   background: linear-gradient(transparent 40%, var(--special-yellow-dark) 40%, var(--special-yellow-dark) 60%, transparent 60%);
   border: none;
 }
@@ -1044,8 +1055,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   outline: none;
 }
 
-.submit-btn:active > span {
-  opacity: 0.3;
+.submit-btn:active {
+  color: rgba(0,0,0,.3);
 }
 
 /*Map popup*/
