@@ -1,21 +1,24 @@
 /*Font section*/
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/gilroy.woff") format("woff");
+  src: url("../fonts/gilroy-extrabold-webfont.woff") format("woff"),
+       url("../fonts/gilroy-extrabold-webfont.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GilroyLight";
-  src: url("../fonts/gilroylight.woff") format("woff");
+  src: url("../fonts/gilroy-light-webfont.woff") format("woff"),
+       url("../fonts/gilroy-light-webfont.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "OpenSans";
-  src: url("../fonts/OpenSans.ttf") format("truetype");
+  src: url("../fonts/open-sans-v17-latin_cyrillic-regular.woff") format("woff"),
+       url("../fonts/open-sans-v17-latin_cyrillic-regular.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
