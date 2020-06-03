@@ -89,11 +89,11 @@ img {
 /*Main header*/
 .main-header {
   min-height: 300px;
-  margin-top: 40px;
   display: grid;
   grid-template-rows: min-content min-content min-content;
   align-content: start;
-  background-color: var(--special-yellow);
+  margin-top: 20px;
+  background-image: linear-gradient(to bottom, var(--basic-white) 20px, var(--special-yellow) 20px);
 }
 
 .main-header.catalog-header {
@@ -103,7 +103,6 @@ img {
 .main-logo {
   display: inline-block;
   margin-left: 40px;
-  margin-top: -20px;
 }
 
 .main-logo:focus {
