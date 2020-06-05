@@ -99,7 +99,7 @@
     <main>
       <h1 class="visually-hidden">HTML Academy: Девайс</h1>
 
- <!--     <section class="slider container">
+      <section class="slider">
         <div class="slider-menu">
           <button type="button" class="slider-btn" aria-label="Кнопка-1"></button>
 
@@ -109,81 +109,92 @@
         </div>
 
         <div class="slider-item">
-          <h2>Делай селфи, как Бен Стиллер!</h2>
+          <h2>Делай селфи,<br> как Бен Стиллер!</h2>
 
           <img src="img/slider-selfy.png" height="486" width="384" alt="Фото самой длинной селфи палки">
 
           <span class="slider-number">01</span>
 
-          <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+          <div class="slider-features">
+            <p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 
-          <a class="btn-info" href="#">подробнее</a>
+            <a class="btn-info" href="#">подробнее</a>
 
-          <table class="slider-features">
-            <tr>
-              <th>8,5 м</th>
-              <th>5 кг</th>
-              <th>Карбон</th>
-            </tr>
+            <ul>
+              <li>
+                <p class="slider-features-head">8,5 м</p>
 
-            <tr>
-              <td>Длина палки</td>
-              <td>Вес палки</td>
-              <td>Материал</td>
-            </tr>
-          </table>
+                <p class="slider-features-discription">Длина палки</p>
+              </li>
+
+              <li>
+                <p class="slider-features-head">5 кг</p>
+
+                <p class="slider-features-discription">Вес палки</p>
+              </li>
+
+              <li>
+                <p class="slider-features-head">Карбон</p>
+
+                <p class="slider-features-discription">Материал</p>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="slider-item">
-          <h2>Худеем правильно!</h2>
+        <div class="slider-item slide-hidden">
+          <h2>Худеем<br> правильно!</h2>
 
           <img src="img/slider-fitness.png" height="483" width="345" alt="Фото фитнес-браслета">
 
           <span class="slider-number">02</span>
 
-          <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+          <div class="slider-features">
+            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
 
-          <a class="btn-info" href="#">подробнее</a>
+            <a class="btn-info" href="#">подробнее</a>
 
-          <table class="slider-features">
-            <tr>
-              <th>48 часов</th>
-            </tr>
+            <ul>
+              <li>
+                <p class="slider-features-head">48 часов</p>
 
-            <tr>
-              <td>Без подзарядки</td>
-            </tr>
-          </table>
-        </div>
+                <p class="slider-features-discription">Без подзарядки</p>
+              </li>
+            </ul>
+          </div>
+         </div>
 
-        <div class="slider-item">
+        <div class="slider-item slide-hidden">
           <h2>Порхает как бабочка, жалит как пчела!</h2>
 
-          <img src="img/slider-quadro.png" height="334" width="526" alt="Фото квадрокоптера">
+          <img class="quadro-img" src="img/slider-quadro.png" height="334" width="526" alt="Фото квадрокоптера">
 
           <span class="slider-number">03</span>
 
-          <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-          </p>
+          <div class="slider-features">
+            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 
-          <a class="btn-info" href="#">подробнее</a>
+            <a class="btn-info" href="#">подробнее</a>
 
-          <table class="slider-features">
-            <tr>
-              <th>800 м</th>
-              <th>50 м</th>
-            </tr>
+            <ul>
+              <li>
+                <p class="slider-features-head">800 м</p>
 
-            <tr>
-              <td>Дальность полета</td>
-              <td>Радиус поражения</td>
-            </tr>
-          </table>
+                <p class="slider-features-discription">Дальность полета</p>
+              </li>
+
+              <li>
+                <p class="slider-features-head">50 м</p>
+
+                <p class="slider-features-discription">Радиус поражения</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <section class="catalog-items container">
-        <ul>
+        <ul class="catalog-items-list">
           <li>
             <a href="catalog_vr.html">Виртуальная реальность</a>
 
@@ -253,16 +264,16 @@
           <div class="service-slider-item delivery">
             <h3>Доставка</h3>
 
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему<br> подъезду совершенно бесплатно! Ведь мы неплохо<br> заработаем, поднимая его на ваш этаж.</p>
           </div>
 
-          <div class="service-slider-item warranty">
+          <div class="service-slider-item warranty slide-hidden">
             <h3>Гарантия</h3>
 
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
           </div>
 
-          <div class="service-slider-item credit">
+          <div class="service-slider-item credit slide-hidden">
             <h3>Кредит</h3>
 
              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
@@ -274,29 +285,29 @@
         <ul class="logo-list">
           <li>
             <a href="#">
-              <img class="dji-logo-img" src="img/logo-dji.png" height="100" width="260" alt="Логотип DJI">
+              <img class="dji-logo-img js-img-logo" src="img/logo-dji.png" height="100" width="260" alt="Логотип DJI">
             </a>
           </li>
 
           <li>
             <a href="#">
-              <img class="sp_gadgets-logo-img" src="img/logo-sp_gadgets.png" height="100" width="260" alt="Логотип SP-GADGETS">
+              <img class="sp_gadgets-logo-img js-img-logo" src="img/logo-sp_gadgets.png" height="100" width="260" alt="Логотип SP-GADGETS">
             </a>
           </li>
 
           <li>
             <a href="#">
-              <img class="gopro-logo-img" src="img/logo-gopro.png" height="100" width="260" alt="Логотип GoPro">
+              <img class="gopro-logo-img js-img-logo" src="img/logo-gopro.png" height="100" width="260" alt="Логотип GoPro">
             </a>
           </li>
 
           <li>
             <a href="#">
-              <img class="vive-logo-img" src="img/logo-vive.png" height="100" width="260" alt="Логотип Vive">
+              <img class="vive-logo-img js-img-logo" src="img/logo-vive.png" height="100" width="260" alt="Логотип Vive">
             </a>
           </li>
         </ul>
-      </section>-->
+      </section>
 
       <div class="container contact-info">
         <section class="about-us">

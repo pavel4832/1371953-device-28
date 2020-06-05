@@ -1,7 +1,7 @@
 /*скрытое меню*/
-let openReff = document.querySelector('.js-open-reff')
+let openReff = document.querySelector('.js-open-reff');
 let openBtn = document.querySelector('.open-menu-btn');
-let hidenMenu = document.querySelector('.hidden-menu-list')
+let hidenMenu = document.querySelector('.hidden-menu-list');
 
 openBtn.addEventListener('click', function (e){
   e.preventDefault();
@@ -12,6 +12,35 @@ openReff.addEventListener('click', function (e){
   e.preventDefault();
   hidenMenu.classList.toggle('visually-hidden')
 });
+
+/*наведение на картнку логотипа в списке*/
+let imgArray = document.getElementsByClassName('js-img-logo');
+
+for (var j = 0; j < imgArray.length; j++) {
+  imgArray[j].addEventListener('mouseover', function () {
+    if(this.classList.contains('dji-logo-img')) {
+      this.src = 'img/logo-dji-fullcolor.png';
+    } else if(this.classList.contains('sp_gadgets-logo-img')) {
+      this.src = 'img/logo-sp_gadgets-fullcolor.png';
+    } else if(this.classList.contains('gopro-logo-img')) {
+      this.src = 'img/logo-gopro-fullcolor.png';
+    } else {
+      this.src = 'img/logo-vive-fullcolor.png';
+    }
+  });
+
+  imgArray[j].addEventListener('mouseout', function () {
+    if(this.classList.contains('dji-logo-img')) {
+      this.src = 'img/logo-dji.png';
+    } else if(this.classList.contains('sp_gadgets-logo-img')) {
+      this.src = 'img/logo-sp_gadgets.png';
+    } else if(this.classList.contains('gopro-logo-img')) {
+      this.src = 'img/logo-gopro.png';
+    } else {
+      this.src = 'img/logo-vive.png';
+    }
+  });
+}
 
 /*наведние на карточку товара*/
 let elementParents = document.querySelectorAll('.product-item');

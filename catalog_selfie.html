@@ -229,7 +229,7 @@
 
             <img src="img/product-1.jpg" height="380" width="360" alt="Фото товара 1">
 
-            <div class="under-hover">
+            <div class="under-hover visually-hidden">
               <button class="add-basket-btn" type="button">в корзину</button>
 
               <button class="add-compare-btn" type="button">Добавить к сравнению</button>
@@ -295,15 +295,19 @@
           </li>
 
           <li class="pagination-item">
-            <a class="active-now" href="#">1</a>
-          </li>
+            <ul class="page-number-list">
+              <li class="pagination-item-number">
+                <a class="active-now" href="#">1</a>
+              </li>
 
-          <li class="pagination-item">
-            <a href="#">2</a>
-          </li>
+              <li class="pagination-item-number">
+                <a href="#">2</a>
+              </li>
 
-          <li class="pagination-item">
-            <a href="#">3</a>
+              <li class="pagination-item-number">
+                <a href="#">3</a>
+              </li>
+            </ul>
           </li>
 
           <li class="pagination-item">
@@ -324,7 +328,7 @@
 
       <section class="footer-menu">
         <div class="login-menu">
-          <div class="hiden-login-menu">
+          <div class="hidden-login-menu">
             <a class="login-btn" href="profile.html">Валентин Петухов</a>
 
             <a class="logout-btn" href="#">Выйти</a>
