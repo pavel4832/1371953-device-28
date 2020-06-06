@@ -545,12 +545,6 @@ img {
   padding: 0;
 }
 
-.catalog-item {
-  width: 160px;
-  height: 160px;
-  background-color: var(--special-yellow);
-}
-
 .catalog-items-list {
   list-style: none;
   display: flex;
@@ -560,66 +554,98 @@ img {
 }
 
 .catalog-items-list li {
-  display: grid;
-  grid-template-rows: 160px min-content;
+  display: inline-block;
   width: 160px;
 }
 
 .catalog-items a {
   display: block;
-  grid-row: 2 / 3;
-  align-self: start;
-  margin-top: 37px;
   letter-spacing: 0.05em;
   color: var(--basic-black);
 }
 
-.item-vr {
+.item-vr::before {
+  content: "";
+  display: inline-block;
+  margin-bottom: 32px;
+  width: 160px;
+  height: 160px;
+  background-color: var(--special-yellow);
   background-image: url("../img/popular-1.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.item-selfie {
+.item-selfie::before {
+  content: "";
+  display: inline-block;
+  margin-bottom: 32px;
+  width: 160px;
+  height: 160px;
+  background-color: var(--special-yellow);
   background-image: url("../img/popular-2.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.item-camera {
+.item-camera::before {
+  content: "";
+  display: inline-block;
+  margin-bottom: 32px;
+  width: 160px;
+  height: 160px;
+  background-color: var(--special-yellow);
   background-image: url("../img/popular-3.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.item-fitnes {
+.item-fitness::before {
+  content: "";
+  display: inline-block;
+  margin-bottom: 32px;
+  width: 160px;
+  height: 160px;
+  background-color: var(--special-yellow);
   background-image: url("../img/popular-4.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.item-watch {
+.item-watch::before {
+  content: "";
+  display: inline-block;
+  margin-bottom: 32px;
+  width: 160px;
+  height: 160px;
+  background-color: var(--special-yellow);
   background-image: url("../img/popular-5.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.item-quadro {
+.item-quadcopters::before {
+  content: "";
+  display: inline-block;
+  margin-bottom: 32px;
+  width: 160px;
+  height: 160px;
+  background-color: var(--special-yellow);
   background-image: url("../img/popular-6.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.catalog-items a:focus {
+.catalog-items a:focus::before {
   outline: none;
 }
 
-.catalog-items a:hover + .catalog-item,
-.catalog-items a:focus + .catalog-item {
+.catalog-items a:hover::before,
+.catalog-items a:focus::before {
   background-color: var(--special-yellow-dark);
 }
 
-.catalog-items a:active + .catalog-item {
+.catalog-items a:active::before {
   opacity: 0.3;
 }
 
