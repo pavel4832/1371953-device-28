@@ -315,7 +315,7 @@
 
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 
-          <a href="https://www.google.com/maps">
+          <a class="open-map-js" href="#">
             <img src="img/map.png" height="222" width="560" alt="Карта">
           </a>
 
@@ -410,46 +410,51 @@
     </footer>
 
     <!--Модальное окно с формой отправки сообщения-->
-<!--    <section id="messPopup" class="message-popup">
-      <h2 class="visually-hidden">Форма отправки сообщения</h2>
+    <section class="message-popup-container">
+      <div class="message-popup">
+        <h2 class="visually-hidden">Форма отправки сообщения</h2>
 
-      <button class="close-btn" type="button" aria-label="Закрыть">
-        <svg width="55" height="55" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle opacity=".5" cx="27.5" cy="27.5" r="27.5" fill="#F7E296"/>
-          <path d="M35.95 37.725L28 29.762l-7.95 7.963-1.775-1.775L26.237 28l-7.962-7.95 1.775-1.775L28 26.238l7.95-7.95 1.762 1.762-7.95 7.95 7.95 7.95-1.762 1.775z" fill="#fff" opacity=".7"/>
-        </svg>
-      </button>
+        <button class="close-btn close-message-btn" type="button" aria-label="Закрыть">
+          <svg width="55" height="55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle opacity=".7" cx="27.5" cy="27.5" r="27.5" fill="#F7E296"/>
+            <path d="M35.95 37.725L28 29.762l-7.95 7.963-1.775-1.775L26.237 28l-7.962-7.95 1.775-1.775L28 26.238l7.95-7.95 1.762 1.762-7.95 7.95 7.95 7.95-1.762 1.775z" fill="#fff" opacity=".7"/>
+          </svg>
+        </button>
 
-      <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
-        <label>Ваше имя:
-          <input class="text-field" type="text" name="name-id" placeholder="Имя Фамилия" required>
-        </label>
+        <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
+          <label>Ваше имя:
+            <input class="text-field" type="text" name="name-id" placeholder="Имя Фамилия">
+          </label>
 
-        <label>Ваш e-mail:
-          <input class="text-field" type="email" name="mail-id" placeholder="email@example.com" required>
-        </label>
+          <label>Ваш e-mail:
+            <input class="text-field" type="email" name="mail-id" placeholder="email@example.com">
+          </label>
 
-        <label>Текст письма:
-          <textarea class="area-field" name="message-text" placeholder="В свободной форме" required></textarea>
-        </label>
+          <label>Текст письма:
+            <textarea class="area-field" name="message-text" placeholder="В свободной форме"></textarea>
+          </label>
 
-        <button class="submit-btn" type="submit">отправить</button>
-      </form>
-    </section>-->
+          <button class="submit-btn" type="submit">отправить</button>
+        </form>
+      </div>
+    </section>
 
     <!--Модальное окно с картой-->
- <!--   <section id="mapPopup" class="map-popup">
-      <h2 class="visually-hidden">Карта</h2>
+    <section class="map-popup-container">
+      <div class="map-popup">
+        <h2 class="visually-hidden">Карта</h2>
 
-      <button class="close-btn" type="button" aria-label="Закрыть">
-        <svg width="55" height="55" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle opacity=".5" cx="27.5" cy="27.5" r="27.5" fill="#F7E296"/>
-          <path d="M35.95 37.725L28 29.762l-7.95 7.963-1.775-1.775L26.237 28l-7.962-7.95 1.775-1.775L28 26.238l7.95-7.95 1.762 1.762-7.95 7.95 7.95 7.95-1.762 1.775z" fill="#fff" opacity=".7"/>
-        </svg>
-      </button>
+        <button class="close-btn close-map-btn" type="button" aria-label="Закрыть">
+          <svg width="55" height="55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle opacity=".7" cx="27.5" cy="27.5" r="27.5" fill="#F7E296"/>
+            <path d="M35.95 37.725L28 29.762l-7.95 7.963-1.775-1.775L26.237 28l-7.962-7.95 1.775-1.775L28 26.238l7.95-7.95 1.762 1.762-7.95 7.95 7.95 7.95-1.762 1.775z" fill="#fff" opacity=".7"/>
+          </svg>
+        </button>
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779994!2d37.527429316215056!3d55.68703098053578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1590143019195!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </section>-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779994!2d37.527429316215056!3d55.68703098053578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1590143019195!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </section>
+
     <script src="js/script.js"></script>
   </body>
 </html>
