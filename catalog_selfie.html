@@ -42,14 +42,11 @@
     <nav class="main-navigation">
       <ul class="main-navigation-list">
         <li class="main-navigation-item">
-          <div class="item-catalog-list">
-            <a class="js-open-reff" href="#">каталог товаров</a>
+          <a class="open-menu-link" href="#">каталог товаров</a>
 
-            <a class="open-menu-btn" href="#" aria-label="Кнопка открыть меню"></a>
-          </div>
-          <ul class="hidden-menu-list visually-hidden">
+          <ul class="hidden-menu-list">
             <li class="hidden-menu-list-item">
-              <ul>
+              <ul class="menu-column-list">
                 <li>
                   <a href="catalog_vr.html">Виртуальная реальность</a>
                 </li>
@@ -65,7 +62,7 @@
             </li>
 
             <li class="hidden-menu-list-item">
-              <ul>
+              <ul class="menu-column-list">
                 <li>
                   <a href="catalog_fitnes.html">Фитнес-браслеты</a>
                 </li>
@@ -159,7 +156,26 @@
           <fieldset class="price-range">
             <legend>Стоимость</legend>
 
-            <input type="range" min="0">
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+
+                <div class="toggle toggle-min" tabindex="0"></div>
+
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
+
+              <div class="price-controls">
+                <label class="min-price">
+                  от <input type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  до <input type="number" name="max-price" value="5000">
+                </label>
+              </div>
+            </div>
           </fieldset>
 
           <fieldset class="color-set">
@@ -229,7 +245,7 @@
 
             <img src="img/product-1.jpg" height="380" width="360" alt="Фото товара 1">
 
-            <div class="under-hover visually-hidden">
+            <div class="under-hover">
               <button class="add-basket-btn" type="button">в корзину</button>
 
               <button class="add-compare-btn" type="button">Добавить к сравнению</button>
@@ -245,7 +261,7 @@
 
             <img src="img/product-2.jpg" height="380" width="360" alt="Фото товара 2">
 
-            <div class="under-hover visually-hidden">
+            <div class="under-hover">
               <button class="add-basket-btn" type="button">в корзину</button>
 
               <button class="add-compare-btn" type="button">Добавить к сравнению</button>
@@ -261,7 +277,7 @@
 
             <img src="img/product-3.jpg" height="380" width="360" alt="Фото товара 3">
 
-            <div class="under-hover visually-hidden">
+            <div class="under-hover">
               <button class="add-basket-btn" type="button">в корзину</button>
 
               <button class="add-compare-btn" type="button">Добавить к сравнению</button>
@@ -272,12 +288,12 @@
         </li>
 
         <li>
-          <article class="product-item">
+          <article class="product-item new-item">
             <h3><a href="#">Селфи&#8209;палка «Следуй за мной»</a></h3>
 
             <img src="img/product-4.jpg" height="380" width="360" alt="Фото товара 4">
 
-            <div class="under-hover visually-hidden">
+            <div class="under-hover">
               <button class="add-basket-btn" type="button">в корзину</button>
 
               <button class="add-compare-btn" type="button">Добавить к сравнению</button>
@@ -402,7 +418,5 @@
       </section>
     </div>
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
