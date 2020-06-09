@@ -108,6 +108,7 @@ img {
 .main-logo:focus {
   outline: none;
 }
+
 .main-logo:hover > svg path {
   fill-opacity: 0.6;
 }
@@ -121,7 +122,9 @@ img {
 }
 
 .header-main-menu {
-  margin-top: 25px;
+  min-height: 52px;
+  padding-top: 7px;
+  padding-bottom: 5px;
   padding-left: 41px;
   display: flex;
   justify-content: flex-start;
@@ -134,6 +137,7 @@ img {
 
 .search-form {
   min-width: 440px;
+  min-height: 50px;
   margin-right: 101px;
   display: flex;
   justify-content: flex-start;
@@ -274,7 +278,7 @@ img {
 }
 
 .main-navigation {
-  margin-top: 49px;
+  margin-top: 30px;
   background-color: transparent;
 }
 
@@ -295,6 +299,7 @@ img {
   text-transform: uppercase;
   color: var(--basic-black);
 }
+
 .main-navigation-item .open-menu-link {
   letter-spacing: 0.1em;
 }
@@ -430,9 +435,10 @@ img {
   margin-left: 21px;
 }
 
-.slider-item .quadro-img {
+.slider-item .quadcopter-img {
   margin-left: -59px;
 }
+
 .slider-btn {
   width: 12px;
   height: 12px;
@@ -637,7 +643,7 @@ img {
   background-repeat: no-repeat;
 }
 
-.item-quadcopters::before {
+.item-quadcopter::before {
   content: "";
   display: inline-block;
   margin-bottom: 32px;
@@ -894,6 +900,7 @@ img {
 .contacts img {
   margin-bottom: 71px;
 }
+
 .more-inform-btn,
 .message-btn {
   display: block;
@@ -939,8 +946,8 @@ img {
   margin-bottom: 30px;
   grid-row: 1 / 2;
   grid-column: 1 / -1;
-
 }
+
 .catalog-page h1 {
   margin-top: 44px;
   margin-bottom: 28px;
@@ -1327,6 +1334,7 @@ img {
   margin-left: auto;
   margin-right: 1px;
 }
+
 .sort-button {
   width: 18px;
   height: 18px;
@@ -1341,6 +1349,7 @@ img {
 .down-row {
   margin-right: 16px;
 }
+
 .btn-on > svg > path {
   opacity: 1.0;
 }
@@ -1443,7 +1452,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .add-basket-btn {
@@ -1609,6 +1618,7 @@ img {
   color: var(--basic-white);
   padding-bottom: 65px;
 }
+
 .footer .container {
   width: 1160px;
   display: grid;
@@ -1853,6 +1863,7 @@ img {
 .close-btn:focus {
   outline: none;
 }
+
 .close-btn:hover {
   cursor: pointer;
 }
