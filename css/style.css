@@ -142,7 +142,7 @@ img {
   display: flex;
   justify-content: flex-start;
   background-color: var(--special-yellow);
-  border-bottom: none;
+  border-bottom: 2px solid transparent;
 }
 
 .search-form::before {
