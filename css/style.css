@@ -1,7 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 @font-face {
   font-family: "Gilroy";
   src: url("../fonts/gilroy-extrabold-webfont.woff2") format("woff2"),
-       url("../fonts/gilroy-extrabold-webfont.woff") format("woff");
+  url("../fonts/gilroy-extrabold-webfont.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
@@ -9,7 +16,7 @@
 @font-face {
   font-family: "GilroyLight";
   src: url("../fonts/gilroy-light-webfont.woff2") format("woff2"),
-       url("../fonts/gilroy-light-webfont.woff") format("woff");
+  url("../fonts/gilroy-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -17,7 +24,7 @@
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/open-sans-v17-latin_cyrillic-regular.woff2") format("woff2"),
-       url("../fonts/open-sans-v17-latin_cyrillic-regular.woff") format("woff");
+  url("../fonts/open-sans-v17-latin_cyrillic-regular.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -93,6 +100,7 @@ img {
 
 .document-page-body {
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   min-height: 100%;
@@ -100,6 +108,7 @@ img {
 
 .main-header {
   display: grid;
+  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
   grid-template-rows: min-content min-content min-content;
   align-content: start;
   min-height: 320px;
@@ -173,12 +182,36 @@ img {
   outline: none;
 }
 
+.search-field::-webkit-input-placeholder {
+  opacity: 0.3;
+}
+
+.search-field::-moz-placeholder {
+  opacity: 0.3;
+}
+
 .search-field::placeholder {
   opacity: 0.3;
 }
 
+.search-field:hover::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.search-field:hover::-moz-placeholder {
+  opacity: 0.6;
+}
+
 .search-field:hover::placeholder {
   opacity: 0.6;
+}
+
+.search-field:focus::-webkit-input-placeholder {
+  color: var(--basic-black);
+}
+
+.search-field:focus::-moz-placeholder {
+  color: var(--basic-black);
 }
 
 .search-field:focus::placeholder {
@@ -422,6 +455,7 @@ img {
   left: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: -webkit-min-content 1fr;
   grid-template-rows: min-content 1fr;
   min-height: 506px;
   background: transparent;
@@ -1210,6 +1244,8 @@ img {
 
 .filter-form label {
   display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
 }
 
@@ -1649,6 +1685,7 @@ img {
 .footer .container {
   display: grid;
   grid-template-rows: auto auto auto;
+  grid-template-columns: -webkit-max-content auto auto;
   grid-template-columns: max-content auto auto;
   align-items: start;
   width: 1160px;
@@ -1942,6 +1979,14 @@ img {
   box-sizing: border-box;
 }
 
+.text-field::-webkit-input-placeholder {
+  color: var(--opacity-black-04);
+}
+
+.text-field::-moz-placeholder {
+  color: var(--opacity-black-04);
+}
+
 .text-field::placeholder {
   color: var(--opacity-black-04);
 }
@@ -1976,6 +2021,14 @@ img {
   outline: none;
 }
 
+.text-field:focus::-webkit-input-placeholder, .area-field:focus::-webkit-input-placeholder {
+  color: var(--basic-dark);
+}
+
+.text-field:focus::-moz-placeholder, .area-field:focus::-moz-placeholder {
+  color: var(--basic-dark);
+}
+
 .text-field:focus::placeholder,
 .area-field:focus::placeholder {
   color: var(--basic-dark);
@@ -1985,6 +2038,14 @@ img {
   border: none;
   background-color: var(--special-red);
   outline: none;
+}
+
+.area-field::-webkit-input-placeholder {
+  color: var(--opacity-black-04);
+}
+
+.area-field::-moz-placeholder {
+  color: var(--opacity-black-04);
 }
 
 .area-field::placeholder {
