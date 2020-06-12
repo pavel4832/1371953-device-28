@@ -411,8 +411,8 @@ img {
 
 .slider-menu {
   position: absolute;
-  top: 204px;
-  right: 8px;
+  top: 205px;
+  right: 20px;
   z-index: 2;
 }
 
@@ -459,10 +459,18 @@ img {
 .slider-btn {
   width: 12px;
   height: 12px;
-  margin-right: 11px;
+  padding: 0;
   border: 1px solid var(--basic-black);
   border-radius: 50%;
   background-color: transparent;
+}
+
+.slider-btn:first-child {
+  margin-right: 13px;
+}
+
+.slider-btn:nth-child(2) {
+  margin-right: 14px;
 }
 
 .slider-btn:hover {
@@ -473,6 +481,12 @@ img {
 .slider-btn:focus {
   outline: none;
   border: 1px solid var(--opacity-black-06);
+}
+
+.active-slider-btn {
+  background-image: url("../img/slider-button.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .slider-item h2 {
@@ -1923,7 +1937,7 @@ img {
   line-height: 16px;
   text-align: left;
   vertical-align: center;
-  border: none;
+  border: 2px solid transparent;
   background-color: var(--special-white);
   box-sizing: border-box;
 }
@@ -1944,7 +1958,7 @@ img {
   line-height: 16px;
   text-align: left;
   vertical-align: center;
-  border: none;
+  border: 2px solid transparent;
   resize: none;
   background-color: var(--special-white);
   box-sizing: border-box;
