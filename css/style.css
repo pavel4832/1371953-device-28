@@ -453,6 +453,7 @@ img {
   position: absolute;
   top: -129px;
   left: 0;
+  width: 1024px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: -webkit-min-content 1fr;
@@ -464,7 +465,7 @@ img {
 .slider-item:after {
   position: absolute;
   top: -18px;
-  right: -22px;
+  right: -26px;
   display: inline-block;
   width: 182px;
   height: 170px;
@@ -483,11 +484,20 @@ img {
   grid-column: 1 / 2;
   grid-row: 1 / -1;
   align-self: center;
-  margin-left: 21px;
+}
+
+.slider-item .selfy-img {
+  margin-top: -24px;
+  margin-left: 20px;
+}
+.slider-item .watch-img {
+  margin-top: 25px;
+  margin-left: 48px;
 }
 
 .slider-item .quadcopter-img {
-  margin-left: -59px;
+  margin-top: -16px;
+  margin-left: -30px;
 }
 
 .slider-btn {
@@ -555,6 +565,7 @@ img {
   font-family: "OpenSans", Arial, sans-serif;
   font-size: 15px;
   line-height: 20px;
+  letter-spacing: -0.02em;
   color: var(--basic-black);
 }
 
@@ -606,6 +617,10 @@ img {
   color: var(--basic-black);
 }
 
+.slider-features .quadcopter-li-first {
+  margin-right: 0;
+}
+
 .slider-features li:last-child {
   margin-right: 0;
 }
@@ -617,10 +632,6 @@ img {
   line-height: 15px;
   letter-spacing: 0.1em;
   color: var(--basic-black);
-}
-
-.slide-hidden {
-  display: none;
 }
 
 /*Catalog items block*/
@@ -836,10 +847,15 @@ img {
 }
 
 .service-slider-item {
+  display: none;
   position: relative;
   width: 883px;
   margin-top: 156px;
   background-color: transparent;
+}
+
+.active-service-slide {
+  display: block;
 }
 
 .service-slider-item h3 {
@@ -856,8 +872,12 @@ img {
   font-family: "OpenSans", Arial, sans-serif;
   font-size: 15px;
   line-height: 28px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--basic-black);
+}
+
+.warranty p {
+ letter-spacing: 0.082em;
 }
 
 .delivery::after {
@@ -870,15 +890,15 @@ img {
 .warranty::after {
   content: url("../img/warranty.svg");
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -18px;
+  right: -19px;
 }
 
 .credit::after {
   content: url("../img/credit.svg");
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -24px;
+  right: 8px;
 }
 
 /*Logo block*/
@@ -1167,7 +1187,7 @@ img {
   border: 8px solid var(--basic-white);
   border-radius: 50%;
   background-color: #C4C4C4;
-  box-shadow: 0px 2px 2px var(--opacity-black-018);
+  box-shadow: 0 2px 2px var(--opacity-black-018);
   cursor: pointer;
 }
 
@@ -1907,7 +1927,7 @@ img {
   width: 960px;
   height: 550px;
   background-color: var(--basic-white);
-  box-shadow: 0px 10px 16px var(--opacity-black-015);
+  box-shadow: 0 10px 16px var(--opacity-black-015);
 }
 
 .close-btn {

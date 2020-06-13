@@ -1,6 +1,71 @@
-/*наведение на картнку логотипа в списке*/
-let imgArray = document.getElementsByClassName('js-img-logo');
+/*Определение переменных для скрипта*/
+let promoSliderMenuBtn = document.querySelectorAll('.slider-btn'); /*массив кнопок переключения промо слайдера*/
+let promoSlideItems = document.querySelectorAll('.slider-item'); /*массив промо слайдов*/
+let serviceSliderBtn = document.querySelectorAll('.service-slider-btn'); /*массив кнопок переклчателей сладера*/
+let sericeSlideItems = document.querySelectorAll('.service-slider-item'); /*массив сервис слайдов*/
+let imgArray = document.getElementsByClassName('js-img-logo'); /*массив логотипов*/
+let messagePopupElement = document.querySelector('.message-popup-container'); /*модальное окно сообщений*/
+let openBtnMessage = document.querySelector('.message-btn'); /*кнопка вызова окна сообщений*/
+let closeBtnMessage = document.querySelector('.close-message-btn'); /*кнопка закрытия окна сообщений*/
+let mapPopupElement = document.querySelector('.map-popup-container'); /*модальное окно карты*/
+let openBtnMap = document.querySelector('.open-map-js'); /* кнопка открытия карты*/
+let closeBtnMap = document.querySelector('.close-map-btn'); /*кнопка закрытия карты*/
 
+/*реализация промо слайдера*/
+  function promoButtonActiveSet(element) {
+    for (var a = 0; a < promoSliderMenuBtn.length; a++) {
+      promoSliderMenuBtn[a].classList.remove('active-slider-btn');
+    }
+    element.classList.add('active-slider-btn');
+  }
+
+  function promoSlideActiveSet(element) {
+    for (var b = 0; b < promoSlideItems.length; b++) {
+      promoSlideItems[b].classList.add('visually-hidden');
+    }
+
+    for (var c = 0; c < promoSlideItems.length; c++) {
+      if (promoSlideItems[c].dataset.number === element.dataset.number) {
+        promoSlideItems[c].classList.remove('visually-hidden');
+      }
+    }
+  }
+
+  for (var k = 0; k < promoSliderMenuBtn.length; k++) {
+    promoSliderMenuBtn[k].addEventListener('click', function () {
+      promoButtonActiveSet(this);
+      promoSlideActiveSet(this);
+    })
+  }
+
+ /*реализация слайдера с сервисами*/
+  function serviceButtonActiveSet(element) {
+    for (var d = 0; d < serviceSliderBtn.length; d++) {
+      serviceSliderBtn[d].classList.remove('active-btn-now');
+    }
+    element.classList.add('active-btn-now');
+  }
+
+  function serviceSlideActiveSet(element) {
+    for (var e = 0; e < sericeSlideItems.length; e++) {
+      sericeSlideItems[e].classList.remove('active-service-slide');
+    }
+
+    for (var f = 0; f < promoSlideItems.length; f++) {
+      if (sericeSlideItems[f].dataset.number === element.dataset.number) {
+        sericeSlideItems[f].classList.add('active-service-slide');
+      }
+    }
+  }
+
+  for (var f = 0; f < promoSliderMenuBtn.length; f++) {
+    serviceSliderBtn[f].addEventListener('click', function () {
+      serviceButtonActiveSet(this);
+      serviceSlideActiveSet(this);
+    })
+  }
+
+/*наведение на картнку логотипа в списке*/
   for (var j = 0; j < imgArray.length; j++) {
     imgArray[j].addEventListener('mouseover', function () {
       if(this.classList.contains('dji-logo-img')) {
@@ -28,10 +93,6 @@ let imgArray = document.getElementsByClassName('js-img-logo');
   }
 
 /*Открытие модального окна с формой отправки сообщения*/
-let messagePopupElement = document.querySelector('.message-popup-container');
-let openBtnMessage = document.querySelector('.message-btn');
-let closeBtnMessage = document.querySelector('.close-message-btn');
-
   openBtnMessage.addEventListener('click', function (e) {
     e.preventDefault();
     messagePopupElement.style.display = 'flex';
@@ -43,10 +104,6 @@ let closeBtnMessage = document.querySelector('.close-message-btn');
   });
 
 /*Открытие модального окна с картой*/
-let mapPopupElement = document.querySelector('.map-popup-container');
-let openBtnMap = document.querySelector('.open-map-js');
-let closeBtnMap = document.querySelector('.close-map-btn');
-
   openBtnMap.addEventListener('click', function (e) {
     e.preventDefault();
     mapPopupElement.style.display = 'flex';
