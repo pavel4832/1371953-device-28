@@ -1680,19 +1680,31 @@ img {
 
 .pagination-item a:hover:not(.disabled):not(.active-now) {
   cursor: pointer;
+}
+
+.pagination-item .page-link:hover:not(.disabled):not(.active-now) {
+  opacity: 0.6;
+}
+
+.pagination-item .go-back:hover:not(.disabled),
+.pagination-item .go-forward:hover:not(.disabled) {
   background-color: var(--special-grey-dark);
+  opacity: 1.0;
 }
 
 .pagination-item a:focus{
   outline: none;
-  background-color: var(--special-grey-dark);
+  opacity: 0.6;
 }
 
-.pagination-item .go-back:active,
-.pagination-item .go-forward:active,
-.pagination-item-number a:active:not(.disabled){
+.pagination-item .go-back:active:not(.disabled):not(.active-now),
+.pagination-item .go-forward:active:not(.disabled):not(.active-now) {
   background-color: var(--special-grey-dark);
   opacity: 0.3;
+}
+
+.pagination-item-number .page-link:active:not(.disabled):not(.active-now) {
+  opacity: 1.0;
 }
 
 /*Main footer*/

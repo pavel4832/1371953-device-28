@@ -2,7 +2,7 @@
 let promoSliderMenuBtn = document.querySelectorAll('.slider-btn'); /*массив кнопок переключения промо слайдера*/
 let promoSlideItems = document.querySelectorAll('.slider-item'); /*массив промо слайдов*/
 let serviceSliderBtn = document.querySelectorAll('.service-slider-btn'); /*массив кнопок переклчателей сладера*/
-let sericeSlideItems = document.querySelectorAll('.service-slider-item'); /*массив сервис слайдов*/
+let serviceSlideItems = document.querySelectorAll('.service-slider-item'); /*массив сервис слайдов*/
 let imgArray = document.getElementsByClassName('js-img-logo'); /*массив логотипов*/
 let messagePopupElement = document.querySelector('.message-popup-container'); /*модальное окно сообщений*/
 let openBtnMessage = document.querySelector('.message-btn'); /*кнопка вызова окна сообщений*/
@@ -22,11 +22,9 @@ let closeBtnMap = document.querySelector('.close-map-btn'); /*кнопка за�
   function promoSlideActiveSet(element) {
     for (var b = 0; b < promoSlideItems.length; b++) {
       promoSlideItems[b].classList.add('visually-hidden');
-    }
 
-    for (var c = 0; c < promoSlideItems.length; c++) {
-      if (promoSlideItems[c].dataset.number === element.dataset.number) {
-        promoSlideItems[c].classList.remove('visually-hidden');
+      if (promoSlideItems[b].dataset.number === element.dataset.number) {
+        promoSlideItems[b].classList.remove('visually-hidden');
       }
     }
   }
@@ -47,13 +45,11 @@ let closeBtnMap = document.querySelector('.close-map-btn'); /*кнопка за�
   }
 
   function serviceSlideActiveSet(element) {
-    for (var e = 0; e < sericeSlideItems.length; e++) {
-      sericeSlideItems[e].classList.remove('active-service-slide');
-    }
+    for (var e = 0; e < serviceSlideItems.length; e++) {
+      serviceSlideItems[e].classList.remove('active-service-slide');
 
-    for (var f = 0; f < promoSlideItems.length; f++) {
-      if (sericeSlideItems[f].dataset.number === element.dataset.number) {
-        sericeSlideItems[f].classList.add('active-service-slide');
+      if (serviceSlideItems[e].dataset.number === element.dataset.number) {
+        serviceSlideItems[e].classList.add('active-service-slide');
       }
     }
   }
