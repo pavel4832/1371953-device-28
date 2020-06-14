@@ -419,7 +419,8 @@ img {
   opacity: 0.6;
 }
 
-.main-navigation-item:hover .hidden-menu-list {
+.main-navigation-item:hover .hidden-menu-list,
+.open-menu-link:focus + .hidden-menu-list {
   display: flex;
 }
 
@@ -748,7 +749,7 @@ img {
   opacity: 0.3;
 }
 
-.catalog-items a:focus::before {
+.catalog-items a:focus {
   outline: none;
 }
 
