@@ -7,9 +7,25 @@ let imgArray = document.getElementsByClassName('js-img-logo'); /*массив л
 let messagePopupElement = document.querySelector('.message-popup-container'); /*модальное окно сообщений*/
 let openBtnMessage = document.querySelector('.message-btn'); /*кнопка вызова окна сообщений*/
 let closeBtnMessage = document.querySelector('.close-message-btn'); /*кнопка закрытия окна сообщений*/
+let messageForm = document.querySelector('.message-form'); /*форма отправки*/
+let messageName = document.querySelector('.js-name'); /*поле ввода имени*/
+let messageEmail = document.querySelector('.js-email'); /*поле ввода email*/
+let messageText = document.querySelector('.js-textarea'); /*поле ввода сообщения*/
+let isStorageSupport = true;
+let storageName = '';
+let storageEmail = '';
+let storageText = '';
 let mapPopupElement = document.querySelector('.map-popup-container'); /*модальное окно карты*/
 let openBtnMap = document.querySelector('.open-map-js'); /* кнопка открытия карты*/
 let closeBtnMap = document.querySelector('.close-map-btn'); /*кнопка закрытия карты*/
+
+try {
+  storageName = localStorage.getItem('name');
+  storageEmail = localStorage.getItem('email');
+  storageText = localStorage.getItem('message');
+} catch (err) {
+  isStorageSupport = false;
+}
 
 /*реализация промо слайдера*/
   function promoButtonActiveSet(element) {
@@ -91,12 +107,44 @@ let closeBtnMap = document.querySelector('.close-map-btn'); /*кнопка за�
 /*Открытие модального окна с формой отправки сообщения*/
   openBtnMessage.addEventListener('click', function (e) {
     e.preventDefault();
-    messagePopupElement.style.display = 'flex';
+    messagePopupElement.classList.add('popup-show');
+
+    if (storageName) {
+      messageName.value = storageName;
+      messageEmail.value = storageEmail;
+      messageText.value = storageText;
+    }
+
+    messageName.focus();
   });
 
   closeBtnMessage.addEventListener('click', function (e) {
     e.preventDefault();
-    messagePopupElement.style.display = 'none';
+    messagePopupElement.classList.remove('popup-show');
+    messagePopupElement.classList.remove('popup-error');
+  });
+
+  messageForm.addEventListener('submit', function (e) {
+    if (!messageName.value || !messageEmail.value || !messageText.value) {
+      e.preventDefault();
+      messagePopupElement.classList.remove('popup-error');
+      messagePopupElement.offsetWidth = messagePopupElement.offsetWidth;
+      messagePopupElement.classList.add('popup-error');
+    } else {
+      localStorage.setItem('name', messageName.value);
+      localStorage.setItem('email', messageEmail.value);
+      localStorage.setItem('message', messageText.value);
+    }
+  });
+
+  window.addEventListener("keydown", function (e) {
+    if (e.keyCode === 27) {
+      if (messagePopupElement.classList.contains('popup-show')) {
+        e.preventDefault();
+        messagePopupElement.classList.remove('popup-show');
+        messagePopupElement.classList.remove('popup-error');
+      }
+    }
   });
 
 /*Открытие модального окна с картой*/

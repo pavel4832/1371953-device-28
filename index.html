@@ -426,15 +426,15 @@
 
         <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
           <label>Ваше имя:
-            <input class="text-field" type="text" name="name-id" placeholder="Имя Фамилия">
+            <input class="text-field js-name" pattern="[A-Za-zА-Яа-яЁё]{3,}" type="text" name="name-id" placeholder="Имя Фамилия">
           </label>
 
           <label>Ваш e-mail:
-            <input class="text-field" type="email" name="mail-id" placeholder="email@example.com">
+            <input class="text-field js-email" type="email" name="mail-id" placeholder="email@example.com">
           </label>
 
           <label>Текст письма:
-            <textarea class="area-field" name="message-text" placeholder="В свободной форме"></textarea>
+            <textarea class="area-field js-textarea" name="message-text" placeholder="В свободной форме"></textarea>
           </label>
 
           <button class="submit-btn" type="submit">отправить</button>
