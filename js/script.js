@@ -150,11 +150,20 @@ try {
 /*Открытие модального окна с картой*/
   openBtnMap.addEventListener('click', function (e) {
     e.preventDefault();
-    mapPopupElement.style.display = 'flex';
+    mapPopupElement.classList.add('popup-show');
   });
 
   closeBtnMap.addEventListener('click', function (e) {
     e.preventDefault();
-    mapPopupElement.style.display = 'none';
+    mapPopupElement.classList.remove('popup-show');
   });
+
+window.addEventListener("keydown", function (e) {
+  if (e.keyCode === 27) {
+    if (mapPopupElement.classList.contains('popup-show')) {
+      e.preventDefault();
+      mapPopupElement.classList.remove('popup-show');
+    }
+  }
+});
 
